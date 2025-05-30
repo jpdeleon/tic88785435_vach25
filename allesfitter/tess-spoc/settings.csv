@@ -1,0 +1,80 @@
+#name,value
+###############################################################################,
+# General settings,
+###############################################################################,
+companions_phot,b
+companions_rv,
+inst_phot,ts1800 ts600 ts200
+inst_rv,
+###############################################################################,
+# Fit performance settings,
+###############################################################################,
+multiprocess,True
+multiprocess_cores,40
+fast_fit,True
+fast_fit_width,0.3333333333333333
+#fast_fit_width,0.5
+secondary_eclipse,False
+phase_curve,False
+shift_epoch,True
+inst_for_b_epoch,all
+###############################################################################,
+# MCMC settings,
+###############################################################################,
+mcmc_nwalkers,100
+mcmc_total_steps,2000
+mcmc_burn_steps,1000
+mcmc_thin_by,2
+###############################################################################,
+# Nested Sampling settings,
+###############################################################################,
+ns_modus,dynamic
+ns_nlive,1000
+ns_bound,single
+ns_sample,auto
+ns_tol,0.01
+###############################################################################,
+# Limb darkening law per object and instrument,
+###############################################################################,
+host_ld_law_ts1800,quad
+host_ld_law_ts600,quad
+host_ld_law_ts200,quad
+#####################################,
+# Exposure interpolation settings,
+#####################################,
+### crucial only for long exposure times,
+t_exp_ts1800,0.0208333
+# t_exp_n_int_ts1800,10
+###############################################################################,
+# Baseline settings per instrument,
+###############################################################################,
+#baseline_flux_ts1800,sample_offset
+#baseline_flux_ts1800,hybrid_spline
+#baseline_flux_ts1800,hybrid_poly_2
+baseline_flux_ts1800,sample_GP_Matern32
+baseline_flux_ts600,sample_GP_Matern32
+baseline_flux_ts200,sample_GP_Matern32
+###############################################################################,
+# Error settings per instrument,
+###############################################################################,
+error_flux_ts1800,sample
+error_flux_ts600,sample
+error_flux_ts200,sample
+###############################################################################,
+# Flares,
+###############################################################################,
+#N_flares,1
+###############################################################################,
+# Host density prior,
+###############################################################################,
+use_host_density_prior,True
+###################################################,
+# Fit TTV,
+###################################################,
+fit_ttvs,False
+###############################################################################,
+# Stellar grid per object and instrument,
+###############################################################################,
+#host_grid_ts1800,very_sparse
+# b_grid_ts1800,very_sparse
+# c_grid_ts1800,very_sparse
